@@ -1,0 +1,11 @@
+<%- include("partials/header") %>
+
+<main class="container">
+  <form action="/post/<%= post.id %>" method="post">
+    <input type="text" name="title" value="<%= post.title %>" required />
+    <textarea name="content" required><%= post.content %></textarea>
+    <button type="submit">Salvar</button>
+  </form>
+</main>
+
+<%- include("partials/footer") %>

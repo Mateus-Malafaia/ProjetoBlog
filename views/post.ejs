@@ -1,0 +1,17 @@
+<%- include("partials/header") %>
+
+<main class="container">
+  <article>
+    <h1><%= post.title %></h1>
+    <p class="meta"><%= post.createdAt.toLocaleString() %></p>
+    <div><%= post.content %></div>
+
+    <a href="/post/<%= post.id %>">Ver post</a>
+    <a href="/post/<%= post.id %>/edit">Editar</a>
+    <form action="/post/<%= post.id %>/delete" method="post">
+      <button type="submit">Excluir</button>
+    </form>
+  </article>
+</main>
+
+<%- include("partials/footer") %>
